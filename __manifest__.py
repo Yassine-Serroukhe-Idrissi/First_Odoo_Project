@@ -11,6 +11,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/data.xml',
+        'wizards/change_status.xml',
         'views/patient.xml',
 
     ],

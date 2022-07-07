@@ -29,6 +29,9 @@ class HospitalPatient(models.Model):
     def action_cancel(self):
         self.state = "cancel"
 
+    def test_name(self):
+        return
+
     @api.model
     def create(self, vals):
         if not vals.get('note'):
