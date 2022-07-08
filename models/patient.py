@@ -17,6 +17,7 @@ class HospitalPatient(models.Model):
     note = fields.Text(string='Description')
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
                               ('done','Done'),('cancel','Cancelled')],default='draft', string="Status", tracking=True)
+
     def action_confirm(self):
         self.state = "confirm"
 

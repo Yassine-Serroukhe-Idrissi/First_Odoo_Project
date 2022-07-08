@@ -2,33 +2,32 @@
 <odoo>
 
     <data>
-       <!-- <record id="change_status_action" model="ir.actions.act_window">
-            <field name="name">Change Status</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">change.status</field>
-            <field name="view_mode">form</field>
-            <field name="target">new</field>
-            <field name="view_id" ref="change_status_form"/>
-        </record>-->
 
         <record id="change_status_form" model="ir.ui.view">
             <field name="name">change.status.form</field>
             <field name="model">change.status</field>
             <field name="arch" type="xml">
                 <form string="Change Status">
+                    <div>
+                        <p>this is a wizzard</p>
+                    </div>
                     <footer>
-                        <!--<button id="button_confirm" name="action_confirm" string="Confirm" class="btn-primary"
+                        <button id="button_change" name="change_status_ac" string="Confirm" class="oe_highlight"
                                 type="object"/>
-                        <button id="button_done" name="action_done" string="Mark As Done" class="btn-primary"
-                                type="object"/>
-                        <button id="button_draft" name="action_draft" string="Set to Draft" class="btn-primary"
-                                type="object"/>
-                        <button id="button_cancel" name="action_cancel" string="Cancel" class="btn-primary"
-                                type="object"/>
-                        <button special="cancel" sting="Cancel"/>-->
+                        <button special="cancel" class="oe_highlight" string="Cancel"/>
                     </footer>
                 </form>
             </field>
         </record>
+
+        <record id="change_status_action" model="ir.actions.act_window">
+            <field name="name">Change Status</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">change.status</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="change_status_form"/>
+            <field name="target">new</field>
+        </record>
+
     </data>
 </odoo>
