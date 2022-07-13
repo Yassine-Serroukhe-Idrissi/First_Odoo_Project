@@ -7,3 +7,6 @@ fix
 
 __08-07-2022__
 I fixed yesterday errors tried to change the status field info from the wizard but i still got new errors
+
+__13-07-2022__
+Fixed the errors of last time made the wizard work for changing status and added print button to print report
