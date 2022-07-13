@@ -3,17 +3,15 @@ from odoo import models, fields,api
 
 class ChangeStatus(models.TransientModel):
     _name = "change.status"
-    _inherit = "hospital.patient"
     _description = "Change Status"
 
-    id = fields.Many2one("hospital.patient",string='id')
-    status = fields.Many2one("hospital.patient.state", string='Status')
+    state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
+                              ('done','Done'),('cancel','Cancelled')],default='draft', string="Status", tracking=True,track_visibility='onchange')
 
-    @api.multi
     def change_status_ac(self):
-        st = self.env['hospital.patient'].browse(self._context.get('active_ids'))
-        for s in st:
-            s.state = "done"
+        self.env['hospital.patient'].browse(self._context.get("active_ids")).update({'state':self.state})
+        return True
+
 
 
 

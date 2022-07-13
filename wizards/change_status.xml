@@ -11,8 +11,11 @@
                     <div>
                         <p>this is a wizzard</p>
                     </div>
+                    <group>
+                        <field name="state"/>
+                    </group>
                     <footer>
-                        <button id="button_change" name="change_status_ac" string="Confirm" class="oe_highlight"
+                        <button name="change_status_ac" string="Confirm" class="oe_highlight"
                                 type="object"/>
                         <button special="cancel" class="oe_highlight" string="Cancel"/>
                     </footer>

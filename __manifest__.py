@@ -12,6 +12,8 @@
         'security/ir.model.access.csv',
         'data/data.xml',
         'wizards/change_status.xml',
+        'reports/patient_cards.xml',
+        'reports/report.xml',
         'views/patient.xml',
 
     ],
@@ -19,4 +21,5 @@
     'installable': True,
     'application': True,
     'auto_install': True,
+    'license': 'LGPL-3',
 }

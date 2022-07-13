@@ -17,8 +17,9 @@ class HospitalPatient(models.Model):
     note = fields.Text(string='Description')
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
                               ('done','Done'),('cancel','Cancelled')],default='draft', string="Status", tracking=True)
+    image = fields.Binary("Image",help="select image")
 
-    def action_confirm(self):
+    """def action_confirm(self):
         self.state = "confirm"
 
     def action_done(self):
@@ -31,7 +32,11 @@ class HospitalPatient(models.Model):
         self.state = "cancel"
 
     def test_name(self):
-        return
+        return"""
+
+    def print_info(self):
+        return self.env.ref('om_hospital.report_patient_cards').report_action(self)
+
 
     @api.model
     def create(self, vals):
@@ -41,3 +46,5 @@ class HospitalPatient(models.Model):
             vals['reference'] = self.env['ir.sequence'].next_by_code('hospital.patient') or ('New')
         res = super(HospitalPatient,self).create(vals)
         return res
+
+
