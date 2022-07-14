@@ -18,6 +18,8 @@ class HospitalPatient(models.Model):
     state = fields.Selection([('draft','Draft'),('confirm','Confirmed'),
                               ('done','Done'),('cancel','Cancelled')],default='draft', string="Status", tracking=True)
     image = fields.Binary("Image",help="select image")
+    doctor = fields.Many2one('hospital.doctor',string="Doctor")
+    appointment_count = fields.Integer(string='Appointment', compute='get_appointment_count')
 
     """def action_confirm(self):
         self.state = "confirm"
@@ -47,4 +49,7 @@ class HospitalPatient(models.Model):
         res = super(HospitalPatient,self).create(vals)
         return res
 
+    def get_appointment_count(self):
+        count = self.env['hospital.appointment'].search_count([('patient', '=', self.id)])
+        self.appointment_count = count
 

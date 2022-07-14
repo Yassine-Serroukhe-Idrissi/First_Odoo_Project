@@ -11,10 +11,13 @@
     'data': [
         'security/ir.model.access.csv',
         'data/data.xml',
+        'views/menu.xml',
         'wizards/change_status.xml',
         'reports/patient_cards.xml',
         'reports/report.xml',
         'views/patient.xml',
+        'views/doctor.xml',
+        'views/appointment.xml',
 
     ],
     'demo': [],
