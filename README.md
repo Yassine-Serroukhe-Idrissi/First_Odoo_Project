@@ -10,3 +10,7 @@ I fixed yesterday errors tried to change the status field info from the wizard b
 
 __13-07-2022__
 Fixed the errors of last time made the wizard work for changing status and added print button to print report
+
+__14-07-2022__
+added doctor and appointment linked each one of them to the patient and a doctor for the appointment and added a appointment
+counter for the doctor and patent
