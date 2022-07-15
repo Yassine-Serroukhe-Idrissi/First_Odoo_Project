@@ -14,3 +14,6 @@ Fixed the errors of last time made the wizard work for changing status and added
 __14-07-2022__
 added doctor and appointment linked each one of them to the patient and a doctor for the appointment and added a appointment
 counter for the doctor and patent
+__15-07-2022__
+I added a dash bord it was working but then i strated to get some errors then tries runing the module in a other computer it
+ turns out working goog over there steal looking for a solution in my computer 
