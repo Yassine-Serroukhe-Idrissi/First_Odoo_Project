@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_calender_view" model="ir.actions.act_window">
+        <field name="name">Appointment Calender</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="appointment_calendar"/>
+    </record>
+
+
+    <record id="dashboard_form_view" model="ir.ui.view">
+        <field name="name">Dashboard Form</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="1-2">
+                    <column>
+                        <action
+                            string="Appointments"
+                            name="%(appointment_action)d"/>
+                        <action
+                            string="Patient"
+                            name="%(patient_action)d"/>
+                    </column>
+                    <column>
+                        <action
+                            srting="Calender"
+                            name="%(action_calender_view)d"/>
+                    </column>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_action" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="dashboard_form_view"/>
+    </record>
+
+    <menuitem id="hospital_dashboard"
+              name="Dashboard"
+              parent="hospital_root"
+              action="dashboard_action"
+              sequence="1"/>
+</odoo>

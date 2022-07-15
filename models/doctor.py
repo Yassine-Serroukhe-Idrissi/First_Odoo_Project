@@ -10,9 +10,8 @@ class HospitalDoctor(models.Model):
                                    ("ophtalmologue","Ophtalmologue"),("dermatologues","Dermatologue")],
                                   default='generaliste', string="Specialite", tracking=True)
 
-    appointment_count = fields.Integer(string='Appointment', compute='get_appointment_count')
+    """appointment_count = fields.Integer(string='Appointment', compute='get_appointment_count')
 
     def get_appointment_count(self):
         count = self.env['hospital.appointment'].search_count([('doctor', '=', self.id)])
-        self.appointment_count = count
-
+        self.appointment_count = count"""

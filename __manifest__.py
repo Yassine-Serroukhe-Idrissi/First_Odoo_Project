@@ -6,7 +6,8 @@
     'sequence': -100000,
     'description': 'Hospital Management ',
     'depends': [
-        'mail'
+        'mail',
+        'board'
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -18,6 +19,7 @@
         'views/patient.xml',
         'views/doctor.xml',
         'views/appointment.xml',
+        'views/dashboard.xml',
 
     ],
     'demo': [],

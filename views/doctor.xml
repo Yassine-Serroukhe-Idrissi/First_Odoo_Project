@@ -24,7 +24,6 @@
                         </group>
                         <group>
                             <field name="specialite"/>
-                            <field name="appointment_count" widget="statinfo"/>
                         </group>
                     </group>
                 </sheet>
