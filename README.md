@@ -17,3 +17,5 @@ counter for the doctor and patent
 __15-07-2022__
 I added a dash bord it was working but then i strated to get some errors then tries runing the module in a other computer it
  turns out working goog over there steal looking for a solution in my computer 
+__18-07-2022 11h15__
+Fixed somme errors now the dashboard and everything is working 
