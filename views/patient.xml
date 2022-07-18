@@ -65,7 +65,6 @@
                 <field name="gender"/>
                 <field name="doctor"/>
                 <field name="note"/>
-                <field string="Appointments" name="appointment_count" widget="statinfo"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -98,7 +97,6 @@
                             <field name="gender"/>
                             <field name="doctor"/>
                             <field name="note"/>
-                            <field string="Appointments" name="appointment_count" widget="statinfo"/>
                         </group>
                     </group>
                 </sheet>
